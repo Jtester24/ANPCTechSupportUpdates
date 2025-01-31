@@ -1,0 +1,36 @@
+from flask import Flask, request, jsonify
+from flask_sqlalchemy import SQLAlchemy
+
+app = Flask(__name__)
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///data.db'  # Example with SQLite
+db = SQLAlchemy(app)
+
+class ClientData(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    site = db.Column(db.String(100))
+    timestamp = db.Column(db.String(100))
+    name = db.Column(db.String(100))
+    email = db.Column(db.String(100))
+    phone = db.Column(db.String(100))
+    description = db.Column(db.Text)
+    guidance_interrupted = db.Column(db.Boolean)
+
+@app.route('/add_client', methods=['POST'])
+def add_client():
+    data = request.get_json()
+    new_client = ClientData(
+        site=data['site'],
+        timestamp=data['timestamp'],
+        name=data['name'],
+        email=data['email'],
+        phone=data['phone'],
+        description=data['description'],
+        guidance_interrupted=data['guidance_interrupted']
+    )
+    db.session.add(new_client)
+    db.session.commit()
+    return jsonify({'message': 'New client added successfully'})
+
+if __name__ == '__main__':
+    db.create_all()  # Create database tables
+    app.run(debug=True)

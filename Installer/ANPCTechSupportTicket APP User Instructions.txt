@@ -1,0 +1,27 @@
+Instructions for Users
+
+Download and Run the Installer:
+
+Download the ANPCTechSupportInstaller.exe file.
+Run the installer and follow the on-screen instructions to install the application.
+Running the Application:
+
+After installation, you can launch the application from the Start Menu or the desktop shortcut.
+Fill in the required fields and select the folder containing the files you want to submit.
+Click the "CONNECT" button to connect to the network and authenticate with Gmail.
+Once connected, click the "Submit" button to submit the support ticket. The application will automatically close after submission.
+
+The application uses the email: anpctechs@gmail.com to send support tickets.
+Ensure you have the necessary credentials and permissions to use this email account.
+Email Password:
+
+ANPCTechSupportTicket APP login information:
+Gmail account
+User Name:anpctechs@gmail.com
+Password: 1qaz2wsx!QAZ@WSX
+
+Follow the prompt from google. Please keep pressing "Continue" and/or "Allow" till the window closes or prompt says "Complete".
+
+The password for the email account should be securely stored and not hardcoded in the application.
+Follow the OAuth2 authentication process to authorize the application to send emails on behalf of the account.
+This process will create an installer that sets up the application on the user's machine, installs dependencies, and places the necessary files in the appropriate directories. If you have any further adjustments or additional features in mind, please let me know!
