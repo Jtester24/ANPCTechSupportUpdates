@@ -26,6 +26,7 @@ from google.oauth2.credentials import Credentials
 from google_auth_oauthlib.flow import InstalledAppFlow
 from google.auth.transport.requests import Request
 from googleapiclient.discovery import build
+import smtplib
 
 # Set up logging
 logging.basicConfig(filename='app.log', level=logging.DEBUG, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -252,15 +253,17 @@ class ANPCSupportTicket(App):
                             zipf.write(os.path.join(root, file), os.path.relpath(os.path.join(root, file), archive_folder))
 
             # Email sending functionality
-            sender_email = "anpctechs@gmail.com"  # Replace with your email
-            recipients = ["jtester@anpc.com"]  # Add your recipients here
+            sender_email = "anpctechs@gmail.com"
+            sender_password = "1qaz2wsx!QAZ@WSX"  # Replace with the actual password or use a secure method to store it
+            recipients = ["jtester@anpc.com","ibeckenbach@anpc.com"]
             subject = "New Support Ticket"
             body = f"""Site: {site}
 Timestamp: {timestamp}
+Contact Information:
 Name: {name}
 Email: {email}
 Whatsapp: {whatsapp}
-Guidance Interrupted: {guidance_interrupted}
+Was Guidance Interrupted?: {guidance_interrupted}
 Comments: {comments}"""
 
             msg = MIMEMultipart()
