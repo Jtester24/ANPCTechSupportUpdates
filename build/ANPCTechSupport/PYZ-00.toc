@@ -5951,6 +5951,10 @@
   ('six',
    'C:\\Users\\Invictus1\\Desktop\\ANPCTechSupport\\.venv\\Lib\\site-packages\\six.py',
    'PYMODULE'),
+  ('smtplib',
+   'C:\\Program '
+   'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\\Lib\\smtplib.py',
+   'PYMODULE'),
   ('socket',
    'C:\\Program '
    'Files\\WindowsApps\\PythonSoftwareFoundation.Python.3.12_3.12.2288.0_x64__qbz5n2kfra8p0\\Lib\\socket.py',
